@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splash">
+    <fragment
+        android:id="@+id/mainFragment2"
+        android:name="com.example.finalproject0623.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment2_to_fragmentEnter"
+            app:destination="@id/fragmentEnter" />
+        <action
+            android:id="@+id/action_mainFragment2_to_registerUser2"
+            app:destination="@id/registerUser2" />
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEnter"
+        android:name="com.example.finalproject0623.FragmentEnter"
+        android:label="fragment_enter"
+        tools:layout="@layout/fragment_enter" >
+        <action
+            android:id="@+id/action_fragmentEnter_to_familyMemberFragment"
+            app:destination="@id/familyMemberFragment" />
+        <action
+            android:id="@+id/action_fragmentEnter_to_BMIActivity"
+            app:destination="@id/BMIActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/familyMemberFragment"
+        android:name="com.example.finalproject0623.FamilyMemberFragment"
+        android:label="fragment_family_member"
+        tools:layout="@layout/fragment_family_member" >
+        <action
+            android:id="@+id/action_familyMemberFragment_to_fragmentEnter"
+            app:destination="@id/fragmentEnter" />
+    </fragment>
+    <activity
+        android:id="@+id/BMIActivity"
+        android:name="com.example.finalproject0623.BMIActivity"
+        android:label="activity_bmiactivity"
+        app:action="action_fragmentEnter_to_BMIActivity"
+        tools:layout="@layout/activity_bmiactivity" />
+    <action
+        android:id="@+id/action_BMIActivity_to_fragmentEnter"
+        app:destination="@id/fragmentEnter" />
+    <activity
+        android:id="@+id/registerUser2"
+        android:name="com.example.finalproject0623.RegisterUser"
+        android:label="activity_register_user"
+        tools:layout="@layout/activity_register_user" />
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.finalproject0623.Splash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splash_to_mainFragment2"
+            app:destination="@id/mainFragment2" />
+        <action
+            android:id="@+id/action_splash_to_fragmentEnter"
+            app:destination="@id/fragmentEnter" />
+    </fragment>
+</navigation>

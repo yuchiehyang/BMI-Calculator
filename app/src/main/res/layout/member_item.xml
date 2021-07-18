@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardBackgroundColor="@color/Yellow"
+    app:cardCornerRadius="25dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+
+            android:layout_width="48dp"
+            android:layout_height="67dp"
+            app:srcCompat="@drawable/ic__account" />
+
+        <TextView
+            android:id="@+id/tv_memberName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family Member name"
+            android:textSize="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_alignParentStart="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+
+
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="100dp"
+            android:text="Age"
+            android:layout_below="@+id/tv_memberName"
+            />
+        <TextView
+            android:id="@+id/tv_BMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="100dp"
+            android:text="BMI"
+            android:layout_below="@+id/tv_age" />
+
+        <TextView
+            android:id="@+id/showAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_below="@+id/tv_memberName"
+            android:text="Age: " />
+
+        <TextView
+            android:id="@+id/showBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_below="@+id/showAge"
+            android:text="BMI: " />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

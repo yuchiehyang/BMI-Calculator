@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+
+        android:title="UserInfo">
+        <EditTextPreference
+            android:icon="@drawable/ic__account"
+            android:defaultValue=""
+            android:key="etUserName"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            app:useSimpleSummaryProvider="true"
+
+            android:title="User Name" />
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="System"
+        android:iconSpaceReserved="true">
+        <SwitchPreference
+            android:icon="@drawable/ic_campaign"
+            android:iconSpaceReserved="true"
+            android:key="noticeOn"
+            android:title="System Notification"
+            app:defaultValue="true"
+            android:defaultValue="true"
+            android:summary="Use to turn notice on/off" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:icon="@drawable/ic_notifications"
+        android:title="Preference category">
+        <ListPreference
+            android:icon="@drawable/ic_library_music"
+            android:entries="@array/ringTone"
+            android:entryValues="@array/ringTone"
+            android:key="libraryMusic"
+            android:title="RingTone" />
+
+
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="--------------Back--------------">
+
+    </PreferenceCategory>
+    <CheckBoxPreference
+        android:icon="@android:drawable/checkbox_on_background"
+        android:defaultValue="false"
+        android:key="backToHomePage"
+        app:defaultValue="false"
+        android:title="Go back to home page?" />
+
+
+</PreferenceScreen>
